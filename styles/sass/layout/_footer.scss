@@ -1,0 +1,29 @@
+.list-inline {
+  margin: 0 20px 20px  20px;
+  a {
+    text-decoration: none;
+  }
+}
+
+footer {
+  padding: 20px 0;
+}
+
+.top-scroll {
+  margin-top: 50px;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+i.scroll {
+  color: #333333;
+  &:hover {
+    color: #0a5175;
+  }
+}
+
+.topBtn {
+  text-align: center;
+}

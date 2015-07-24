@@ -1,0 +1,16 @@
+//components
+@import "components/nav";
+@import "components/mediaQuery";
+
+// Base
+@import "base/normalize";
+@import "base/variables";
+@import "base/global";
+@import "base/typography";
+
+
+// Layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/portfolio";
+@import "layout/about";

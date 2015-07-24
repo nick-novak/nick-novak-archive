@@ -1,0 +1,53 @@
+@media (max-width: 768px) {
+  .header {
+    background: url(../img/header.jpg) no-repeat center center scroll;
+  }
+  .map {
+    height: 75%;
+  }
+  .info {
+    width: 87%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .info {
+    width: 97%;
+  }
+  .img-portfolio {
+    width: 425px;
+  }
+}
+
+@media (max-width: 991px) {
+  .img-portfolio {
+    width: 685px;
+  }
+  .info {
+    width: 96%;
+  }
+}
+
+@media (max-width: 535px) {
+  .nav a {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    h1 {
+      width: 100%;
+      font-size: 2.7em;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+  hr.hLine {
+    width: 300px;
+  }
+  .nav li {
+    display: inline;
+  }
+}
