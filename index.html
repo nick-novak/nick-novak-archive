@@ -43,38 +43,26 @@
     <!-- CSS -->
     <link href="styles/css/bootstrap.css" rel="stylesheet">
     <link href="styles/css/main.css" rel="stylesheet">
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">    
-    <!-- Scripts -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="js/actions.js"></script>
-    <script async="" src="//www.google-analytics.com/analytics.js"></script>
-    <!-- ShadowBox -->
-	<link rel="stylesheet" type="text/css" href="css/shadowbox.css">
-	<script type="text/javascript" src="js/shadowbox.js"></script>
-	<script type="text/javascript">
-	Shadowbox.init();
-	</script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> 
  
 </head>
 
 <body>
-
     <!-- Full Page Image Header Area -->
-    <div id="top" class="header">
-            <nav class="nav">
-        <ul class="nav__effect">
-            <li>
-                <a href="#portfolio">Recent Work</a>
-            </li>
-            <li class="nav">
-                <a href="about.html">About</a>
-            </li>
-            <li class="nav">
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="header image">
+
+        <div id="top" class="feature">
+        <header id="header" class="headroom">
+            <div class="nav">
+                <nav>
+                        <ul class="nav__effect">
+                            <li><a href="#portfolio">Recent Work</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                </nav>
+            </div>
+        </header>
+    <div class="feature image">
     	    <a href="index.html">
             <div class="vert-text" id="fade">
                 <div id="logo">
@@ -277,35 +265,26 @@
         </div>
     </footer>
     <!-- /Footer -->
-
-    <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
+        <!-- JavaScript -->
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/headroom.js"></script>
+    <script type="text/javascript" src="js/jQuery.headroom.js"></script>
+    <script type="text/javascript" src="js/actions.js"></script>
+    <script type="text/javascript">
+        $("#header").headroom();
+    </script> 
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <!-- ShadowBox -->
+    <!--<link rel="stylesheet" type="text/css" href="css/shadowbox.css">
+    <script type="text/javascript" src="js/shadowbox.js"></script>
+    <script type="text/javascript">
+    Shadowbox.init();
+    </script> -->
     <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
     <script>
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    </script>
-	<script type="text/javascript">
-$('li a.nav').click(function(){
-    $('a.nav').removeClass("active");
-    $(this).addClass("active");
-});
-</script>    
-	</script>
+    
+    </script>    
 
 </body>
 
