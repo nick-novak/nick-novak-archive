@@ -29,7 +29,7 @@ $(function() {
 // ------------------------------//
 
 $("header").headroom({
-  "offset": 375,
+  "offset": 75,
   "tolerance": 5,
   "classes": {
     "initial": "animated",
