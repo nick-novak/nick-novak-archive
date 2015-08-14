@@ -113,7 +113,7 @@ nav li {
   -webkit-transition: all .25s ease-in-out;
   -moz-transition: all .25s ease-in-out;
   -o-transition: all .25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  transition: all .25s ease-in-out;
 }
 
 .slide--reset {
@@ -126,6 +126,20 @@ nav li {
   -webkit-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
   transform: translateY(-100%);
+}
+
+.slide--Down {
+  background-color: #4C4C4C;
+  opacity: 0.9;
+  border: grey;
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.headroom--top {
+  background: none;
 }
 
 @media (max-width: 768px) {
@@ -786,6 +800,7 @@ html, body {
   height: 60%;
   width: 100%;
   position: relative;
+  padding-top: 3%;
   background: url(../../img/header.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;

@@ -7,6 +7,7 @@
 
 nav {
   float: right;
+  // width: 40%;
   a {
     position: relative;
     display: inline;
@@ -77,128 +78,7 @@ nav li  {
   background-color: #292f36;
 }
 
-
-// ---------------------- //
-// ---------------------- //
-// ------- new nav ------ //
-// ---------------------- //
-// ---------------------- //
-
-// nav {
-//   color: #333;
-//   position: absolute;
-//   top: 0;
-//   width: 100%;
-//   height: 46px;
-//   padding-top: 8px;
-//   right: 0;
-//   z-index: 1000;
-//   cursor: pointer;
-//   overflow: hidden;
-//   -webkit-transform: translate(0,0);
-//   -moz-transform: translate(0,0);
-//   -o-transform: translate(0,0);
-//   transform: translate(0,0);
-//   -webkit-transition: -webkit-transform .4s, height .3s, background .4s;
-//   -moz-transition: -moz-transform .4s, height .3s, background .4s;
-//   transition: transform .4s, height .3s, background .4s;
-// }
-
-// /* when hidden it goes up */
-// nav.invisible {
-//   -webkit-transform: translate(0,-64px);
-//   -moz-transform: translate(0,-64px);
-//   -o-transform: translate(0,-64px);
-//   transform: translate(0,-64px);
-//   -webkit-transition: -webkit-transform .2s;
-//   -moz-transition: -moz-transform .2s;
-//   -o-transition: -o-transform .2s;
-//   transition: transform .2s;
-//   opacity: 0;
-// }
-
-// /* when shown & detached position is fixed */
-// nav.detached {
-//   position: fixed;
-//   background: rgba(255,255,255,.9);
-//   -webkit-transition: -webkit-transform .3s, height .3s, background .4s, opacity .3s;
-//   -moz-transition: -moz-transform .3s, height .3s, background .4s, opacity .3s;
-//   -o-transition: -o-transform .3s, height .3s, background .4s, opacity .3s;
-//   transition: transform .3s, height .3s, background .4s, opacity .3s;
-// }
-
-// /* increases menu width & height */
-// nav.expanded {
-//   width: 100%;
-//   height: 100%;
-//   position: fixed;
-//   cursor: default;
-//   background: rgba(255,255,255,.85);
-// }
-
-// /* positions navigation content */
-// // #navigation {
-// //   -webkit-transform: translate(0,-700px);
-// //   -moz-transform: translate(0,-700px);
-// //   -o-transform: translate(0,-700px);
-// //   transform: translate(0,-700px);
-// //   opacity: 0;
-// //   padding-top: 2em;
-// //   text-align: center;
-// //   -webkit-transition: -webkit-transform .15s, opacity .7s;
-// //   -moz-transition: -moz-transform .15s, opacity .7s;
-// //   -o-transition: -o-transform .15s, opacity .7s;
-// //   transition: transform .15s, opacity .7s;
-// // }
-
-// /* shows navigation */
-// nav.expanded #navigation {
-//   -webkit-transform: translate(0,0);
-//   -moz-transform: translate(0,0);
-//   -o-transform: translate(0,0);
-//   transform: translate(0,0);
-//   opacity: 1;
-// }
-
-// ---------------------- //
-// ---------------------- //
-// ------- new nav ------ //
-// ------- 8.04.15 ------ //
-// ---------------------- //
-
-// .navigation-bar {
-//   background-color: GhostWhite;
-//   border: 1px solid Gainsboro;
-//   left: 0;
-//   position: fixed;
-//   right: 0;
-//   top: 0;
-//   z-index: 1000;
-  
-//   &.is-hidden {
-//     opacity: 0;
-//     -webkit-transform: translate(0,-60px);
-//     -webkit-transition: -webkit-transform .2s,background .3s,color .3s,opacity 0 .3s;
-//   }
-  
-//   &.is-visible {
-//     opacity: 1;
-//     -webkit-transform: translate(0,0);
-//     -webkit-transition: -webkit-transform .2s,background .3s,color .3s;
-//   }
-  
-//   ul {
-//     list-style: none;
-//     margin: 0;
-//     padding: 0;
-    
-//     li {
-//       display: inline-block;
-//       padding: 1em;
-//     }
-//   }
-// }
-
+// Headroom attributes
 
 .headroom {
     position: fixed;
@@ -212,6 +92,7 @@ nav li  {
     -ms-transition: .25s;
     transition: transform .25s ease-in-out;
 }
+
 .headroom--unpinned {
     top: -108px;
   -webkit-transition: .25s;
@@ -239,22 +120,34 @@ nav li  {
     -webkit-transition: all .25s ease-in-out;
     -moz-transition: all .25s ease-in-out;
     -o-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out
+    transition: all .25s ease-in-out;
 }
 
 .slide--reset {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
-    transform: translateY(0)
+    transform: translateY(0);
 }
 
 .slide--Up {
     -webkit-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
-    transform: translateY(-100%)
+    transform: translateY(-100%);
 }
 
 .slide--Down {
-  // background-color: #ffffff;
-  // opacity: .075;
+  background-color:  #4C4C4C;
+  opacity: 0.9;
+  border: grey;
+  -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    // nav ul a {
+    //   color: black;
+    // }
+}
+
+.headroom--top {
+background: none;
 }

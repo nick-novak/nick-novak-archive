@@ -60,19 +60,17 @@
     <!-- Full Page Image Header Area -->
    
     <div id="top" class="feature">
-            <nav class="nav">
-        <ul class="nav__effect">
-            <li>
-                <a href="index.html">Recent Work</a>
-            </li>
-            <li class="nav">
-                <a href="about.html">About</a>
-            </li>
-            <li class="nav">
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </nav>
+        <header id="header" class="headroom">
+            <div class="nav">
+                <nav>
+                        <ul class="nav__effect">
+                            <li><a href="index.html">Recent Work</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                </nav>
+            </div>
+        </header>
     <div class="feature image">
             <a href="index.html">
             <div class="vert-text" id="fade">
@@ -154,48 +152,27 @@
     </footer>
     <!-- /Footer -->
 
-    <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
+    <!-- /Footer -->
     <script src="js/bootstrap.js"></script>
-       <!-- Add fancyBox -->
-	<link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-	<script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-	<!-- Optionally add helpers - button, thumbnail and/or media -->
-	<link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
-	<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-	<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-	
-	<link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-	<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-
+        <!-- JavaScript -->
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/headroom.js"></script>
+    <script type="text/javascript" src="js/jQuery.headroom.js"></script>
+    <script type="text/javascript" src="js/actions.js"></script>
+    <script type="text/javascript">
+        $("#header").headroom();
+    </script> 
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <!-- ShadowBox -->
+    <!--<link rel="stylesheet" type="text/css" href="css/shadowbox.css">
+    <script type="text/javascript" src="js/shadowbox.js"></script>
+    <script type="text/javascript">
+    Shadowbox.init();
+    </script> -->
     <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
     <script>
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    </script>
-	<script type="text/javascript">
-$(".fancybox")
-    .attr('rel', 'gallery')
-    .fancybox({
-        beforeLoad: function() {
-            this.title = $(this.element).attr('caption');
-        }
-    });
-	</script>
+    
+    </script>    
 
 </body>
 
