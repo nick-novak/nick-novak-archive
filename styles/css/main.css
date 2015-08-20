@@ -12,7 +12,6 @@ nav a {
   position: relative;
   display: inline;
   margin: 15px 25px;
-  outline: none;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -29,6 +28,7 @@ nav li {
 }
 
 .nav__effect a {
+  outline-style: none;
   color: #ffffff;
   text-shadow: none;
   padding: 10px 0;
@@ -737,6 +737,15 @@ table {
 td,
 th {
   padding: 0;
+}
+
+/**
+   ==========================================================================
+ * CUSTOM SETTINGS
+   ==========================================================================
+ */
+a {
+  outline: 0;
 }
 
 html, body {
