@@ -1531,3 +1531,5 @@
 		}
 	};
 })(jQuery);
+
+$("#header").headroom("destroy");
