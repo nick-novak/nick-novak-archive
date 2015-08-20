@@ -1,40 +1,145 @@
-#nav {
-  position: absolute;
-  z-index: 99999;
-}
-
-#nav--Wrapper {
-  postion: fixed;
+*:after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 nav {
-  font-size: 1.2em;
+  float: right;
+}
+nav a {
+  position: relative;
   display: inline;
-  text-align: center;
-  background: #fff;
-  width: 100%;
-  padding: 5px 0 5px 0;
-  border-bottom: 2px solid #c6baba;
-}
-
-.nav li {
-  font-weight: lighter;
-  display: inline-block;
-  opacity: 1;
-}
-.nav a {
-  font-weight: lighter;
-  font-size: 0.75em;
+  margin: 15px 25px;
+  color: #fff;
+  text-decoration: none;
   text-transform: uppercase;
-  margin: 0 10px;
+  letter-spacing: 1.5px;
+  font-weight: 200;
+  font-size: 1em;
+}
+nav aa:hover, nav aa:focus {
+  outline: none;
 }
 
-a:hover {
-  background-color: #ffffff;
+nav li {
+  display: inline-block;
 }
 
-.active {
-  background-color: black;
+.nav__effect a {
+  outline-style: none;
+  color: #ffffff;
+  text-shadow: none;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.nav__effect a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  opacity: 0;
+  -webkit-transform: translateX(-15px);
+  -moz-transform: translateX(-5px);
+  transform: translateX(-15px);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  -moz-transition: -moz-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  pointer-events: none;
+}
+
+.nav__effect a:hover::before,
+.nav__effect a:focus::before {
+  opacity: 0;
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+.nav__effect a:hover::after,
+.nav__effect a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.header {
+  background-color: #292f36;
+}
+
+.headroom {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: .25s;
+  -o-transition: .25s;
+  -moz-transition: .25s;
+  -ms-transition: .25s;
+  transition: transform .25s ease-in-out;
+}
+
+.headroom--unpinned {
+  top: -108px;
+  -webkit-transition: .25s;
+  -o-transition: .25s;
+  -moz-transition: .25s;
+  -ms-transition: .25s;
+  transition: .25s;
+  -webkit-transform: translateY(-108px);
+  -o-transform: translateY(-108px);
+  -moz-transform: translateY(-108px);
+  -ms-transform: translateY(-108px);
+  transform: translateY(-108px);
+}
+
+.headroom--pinned {
+  top: 0;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  transition: .5s;
+}
+
+.slide {
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.slide--reset {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.slide--Up {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.slide--Down {
+  background-color: #4C4C4C;
+  opacity: 0.9;
+  border: grey;
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.headroom--top {
+  background: none;
 }
 
 @media (max-width: 768px) {
@@ -634,6 +739,15 @@ th {
   padding: 0;
 }
 
+/**
+   ==========================================================================
+ * CUSTOM SETTINGS
+   ==========================================================================
+ */
+a {
+  outline: 0;
+}
+
 html, body {
   font-family: 'lato-light', Helvetica, Arial, sans-serif;
   height: 100%;
@@ -689,12 +803,13 @@ html, body {
   src: url("../../fonts/latobold/lato-bold.eot") format("embedded-opentype"), url("../../fonts/latobold/lato-bold.woff") format("woff"), url("../../fonts/latobold/lato-bold.ttf") format("truetype"), url("../../fonts/latobold/lato-bold.svg#latobold") format("svg");
   font-weight: bold;
 }
-.header {
+.feature {
   font-family: 'lato-hairline', Helvetica, Arial, sans-serif;
   display: table;
   height: 60%;
   width: 100%;
   position: relative;
+  padding-top: 3%;
   background: url(../../img/header.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
