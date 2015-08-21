@@ -38,5 +38,17 @@ $("header").headroom({
   }
 });
 
-// to destroy
-$("#header").headroom("destroy");
+
+// -------------------------------------------//
+// ------ Disable Headroom for lightcase -----//
+// -------------------------------------------//
+$( "html" ).click(function() {
+ 
+    if ($(this).hasClass("lightcase-open")){
+        $("#header").addClass("headroom--unpinned");
+    }
+    else{
+        $("#header").removeClass("headroom--unpinned");
+    }
+ 
+});

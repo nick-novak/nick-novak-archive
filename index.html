@@ -44,6 +44,7 @@
     <link href="styles/css/bootstrap.css" rel="stylesheet">
     <link href="styles/css/main.css" rel="stylesheet">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" type="text/css" href="css/lightcase.css">
  
 </head>
 
@@ -155,7 +156,7 @@
 	                        </ul> 
                         </div>
                         <div class="col-md-6">
-	                        <a href="img/visualself.jpg" rel="shadowbox">
+	                        <a href="img/visualself.jpg" data-rel="lightcase">
 	                            <img class="img-portfolio img-responsive" src="img/visualpreview.jpg" height="300">
 	                        </a>
                         </div>
@@ -174,7 +175,7 @@
 	                        </ul> 
                         </div>
                         <div class="col-md-6">
-	                        <a href="img/strat.jpg" rel="shadowbox">
+	                        <a href="img/strat.jpg" data-rel="lightcase">
 	                            <img class="img-portfolio img-responsive" src="img/stratpreview.jpg" height="300">
 	                        </a>
                         </div>
@@ -194,7 +195,7 @@
 	                        </ul> 
                         </div>
                         <div class="col-md-6">
-	                        <a href="img/self.jpg" rel="shadowbox">
+	                        <a href="img/self.jpg" data-rel="lightcase">
 	                            <img class="img-portfolio img-responsive" src="img/self-preview.jpg" height="300">
 	                        </a>
                         </div>
@@ -213,14 +214,14 @@
 	                        </ul> 
                         </div>
                         <div class="col-md-6">
-	                        <a href="img/jtck.jpg" rel="shadowbox[grutto]">
+	                        <a href="img/jtck.jpg" data-rel="lightcase:myCollection:slideshow">
 	                            <img class="img-portfolio img-responsive" src="img/posterpreview.jpg" height="300">
 	                        </a>
 	                        <div style='display:none;'>
-								<a href="img/blackkeys.jpg" rel='shadowbox[grutto]'></a> 
-								<a href="img/okgo.jpg" rel='shadowbox[grutto]'></a> 
-								<a href="img/she-him.jpg" rel='shadowbox[grutto]'></a>
-								<a href="img/surferblood.jpg" rel='shadowbox[grutto]'></a> 
+								<a href="img/blackkeys.jpg" data-rel="lightcase:myCollection:slideshow"></a> 
+								<a href="img/okgo.jpg" data-rel="lightcase:myCollection:slideshow"></a> 
+								<a href="img/she-him.jpg" data-rel="lightcase:myCollection:slideshow"></a>
+								<a href="img/surferblood.jpg" data-rel="lightcase:myCollection:slideshow"></a> 
 							</div>
                         </div>
                        </div>
@@ -271,9 +272,12 @@
     <script type="text/javascript" src="js/headroom.js"></script>
     <script type="text/javascript" src="js/jQuery.headroom.js"></script>
     <script type="text/javascript" src="js/actions.js"></script>
+    <script type="text/javascript" src="js/lightcase.js"></script>
     <script type="text/javascript">
-        $("#header").headroom();
-    </script> 
+        jQuery(document).ready(function($) {
+            $('a[data-rel^=lightcase]').lightcase();
+        });
+    </script>
     <script async="" src="//www.google-analytics.com/analytics.js"></script>
     <!-- ShadowBox -->
     <!--<link rel="stylesheet" type="text/css" href="css/shadowbox.css">
